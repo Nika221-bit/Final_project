@@ -389,16 +389,16 @@ select {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 50px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .footer-column {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-column h3 {
@@ -482,15 +482,23 @@ select {
 
 @media (max-width: 1200px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr;
     gap: 40px;
+  }
+  
+  .footer-column {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr;
     gap: 30px;
+  }
+  
+  .footer-column {
+    flex: 1 1 100%;
+    min-width: 100%;
   }
 }
 
@@ -547,4 +555,213 @@ select {
   position: relative;
   bottom: 0px;
 }
+}
+
+/* about */
+.about-hero {
+  background-image: url(images/pexels-photo-685530\ 1.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+.about-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.about-hero-content h1 .cant {
+  color: #F57325;
+}
+
+.about-hero-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.about-hero-content h2 .struggle {
+  color: #6366F1;
+}
+.who{display: flex;
+     justify-content: space-between;}
+.who-are-we {
+  padding: 80px 40px;
+  background-color: white;
+  display: flex;
+}
+
+.who-are-we-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-are-we-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  gap: 10px;
+}
+
+.who-are-we-content h2 span {
+  color: #F57325;
+}
+
+.who-are-we-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+  padding-left: 40px;
+  border-left: 4px solid #6366F1;
+}
+
+.who-are-we-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.who-are-we-images img {
+  flex: 1;
+  min-width: 250px;
+  height: 300px;
+  object-fit: cover;
+  
+}
+
+.about-stats {
+  background-color: #F8E8ED;
+  padding: 80px 40px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.stat-item h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #F57325;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.stat-item p {
+  font-size: 16px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .who-are-we-images {
+    flex-direction: column;
+  }
+  
+  .who-are-we-images img {
+     width: 100%;
+    gap: 10px;
+  }
+ 
+  .stats-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .stat-item {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .about-hero-content h2 {
+    font-size: 24px;
+  }
+
+  .who {
+    flex-direction: column;
+  }
+
+  .who-are-we {
+    padding: 60px 20px;
+  }
+
+  .who-are-we-content p {
+    max-width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  .about-hero {
+    height: 300px;
+  }
+
+  .about-hero-content {
+    padding: 0 20px;
+  }
+
+  .about-stats {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .about-hero-content h2 {
+    font-size: 18px;
+  }
+
+  .who-are-we-content h2 {
+    font-size: 28px;
+  }
+
+  .stat-item h3 {
+    font-size: 36px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .who-are-we-images{flex-direction: column;}
+
+  .who-are-we-images img {
+    height: 250px;
+  }
 }
