@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -151,6 +158,342 @@ select {
                 position: relative;
                 gap: 10PX;
                 cursor: pointer;}
+
+.Program {
+  background-color: black;
+  padding: 60px 40px 80px 40px;
+  margin-top: 100px;
+}
+
+.program-header {
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+.program-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+
+.program-header p {
+  font-size: 13px;
+  color: #F57325;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.programs-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+  scroll-behavior: smooth;
+}
+
+
+
+.program_card {
+  flex: 0 0 387px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0;
+  color: white;
+  width: 387px;
+  height: 719px;
+}
+
+.program_card img {
+  width: 387px;
+  height: 581px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.program_card h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.program_card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+.Membership {
+  background-color: #F8E8ED;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.membership-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  font-family: "Roboto", sans-serif;
+}
+
+.membership-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.membership-card {
+  width: 300px;
+  padding: 40px 30px;
+  border: 2px solid #F57325;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+ 
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+}
+
+.membership-card.featured {
+  background-color:#7378D0;
+  border: none;
+  color: white;
+  transform: scale(1.05);
+
+}
+
+.membership-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.membership-card.featured h3 {
+  color: white;
+}
+
+.membership-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.membership-features li {
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+
+
+
+.membership-features li.included {
+  color: #333;
+}
+
+.membership-card.featured .membership-features li.included {
+  color: white;
+}
+
+.membership-features li.excluded {
+  color: #ccc;
+}
+
+.membership-card.featured .membership-features li.excluded {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.membership-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F57325;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+.membership-card.featured .membership-price {
+  color: white;
+}
+
+.membership-price .period {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.membership-card.featured .membership-price .period  {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.membership-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #F57325;
+  border-radius: 8px;
+  background-color: white;
+  color: #F57325;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.membership-btn:hover {
+  background-color: #F57325;
+  color: white;
+}
+
+.membership-btn.featured-btn {
+  background-color: #F57325;
+  color: white;
+  border-color: #F57325;
+}
+
+.membership-btn.featured-btn:hover {
+  background-color: #e56416;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 60px 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Anek Devanagari", sans-serif;
+}
+
+.footer-logo {
+  color: #F57325;
+}
+
+.footer-logo span {
+  color: white;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #F57325;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F57325;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: #F57325;
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #F57325;
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 
 @media (max-width: 1200px) {
   header {
