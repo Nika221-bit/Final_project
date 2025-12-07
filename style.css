@@ -212,6 +212,7 @@ select {
   flex-direction: row;
   gap: 25px;
   padding-bottom: 30px;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
