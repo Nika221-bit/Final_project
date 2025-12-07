@@ -211,7 +211,6 @@ select {
   display: flex;
   flex-direction: row;
   gap: 25px;
-  overflow-x: auto;
   padding-bottom: 30px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -296,15 +295,21 @@ select {
 
 .membership-card:hover {
   transform: translateY(-5px);
+  background-color: #7378D0;
 }
 
 .membership-card.featured {
-  background-color:#7378D0;
+  background-color:white;
   border: none;
-  color: white;
+  color:#F57325;
   transform: scale(1.05);
+  border: 1px solid #F57325;
 
 }
+.membership-card.featured:hover {
+  background-color:#7378D0;
+}
+
 
 .membership-card h3 {
   font-size: 24px;
@@ -315,7 +320,7 @@ select {
 }
 
 .membership-card.featured h3 {
-  color: white;
+  color: #000000;
 }
 
 .membership-features {
@@ -330,6 +335,7 @@ select {
   padding: 12px 0;
   font-size: 14px;
   font-weight: 500;
+  color: #333 ;
   
 }
 
@@ -340,7 +346,7 @@ select {
 }
 
 .membership-card.featured .membership-features li.included {
-  color: white;
+  color: #333;
 }
 
 .membership-features li.excluded {
@@ -351,6 +357,25 @@ select {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.membership-card:hover h3,
+.membership-card:hover .membership-features li,
+.membership-card:hover .membership-price,
+.membership-card:hover .membership-price .price,
+.membership-card:hover .membership-price .period,
+.membership-card:hover .membership-btn {
+  color: #fff;
+}
+
+.membership-card.featured:hover,
+.membership-card.featured:hover h3,
+.membership-card.featured:hover .membership-features li,
+.membership-card.featured:hover .membership-price,
+.membership-card.featured:hover .membership-price .price,
+.membership-card.featured:hover .membership-price .period,
+.membership-card.featured:hover .membership-btn.featured-btn {
+  color: #fff;
+}
+
 .membership-price {
   font-size: 28px;
   font-weight: 700;
@@ -359,18 +384,10 @@ select {
   font-family: "Roboto", sans-serif;
 }
 
-.membership-card.featured .membership-price {
-  color: white;
-}
-
 .membership-price .period {
   font-size: 14px;
-  color: #666;
+  color:  #F57325;
   font-weight: 500;
-}
-
-.membership-card.featured .membership-price .period  {
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .membership-btn {
@@ -390,16 +407,6 @@ select {
 .membership-btn:hover {
   background-color: #F57325;
   color: white;
-}
-
-.membership-btn.featured-btn {
-  background-color: #F57325;
-  color: white;
-  border-color: #F57325;
-}
-
-.membership-btn.featured-btn:hover {
-  background-color: #e56416;
 }
 
 .footer {
