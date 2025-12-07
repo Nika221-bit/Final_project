@@ -295,16 +295,20 @@ select {
 }
 
 .membership-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   background-color: #7378D0;
 }
 
 .membership-card.featured {
-  background-color:white;
-  border: none;
-  color:#F57325;
-  transform: scale(1.05);
-  border: 1px solid #F57325;
+   width: 300px;
+  padding: 40px 30px;
+  border: 2px solid #F57325;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 
 }
 .membership-card.featured:hover {
